@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import SectionTitle from '../components/SectionTitle';
 import { FaBriefcase, FaUsers, FaTrophy } from 'react-icons/fa';
+import aboutMe from '../assets/aboutme.jpeg';
 import { Link } from 'react-scroll';
 
 const About = () => {
@@ -45,7 +46,7 @@ const About = () => {
             >
               <div className="absolute -inset-4 bg-primary/10 rounded-3xl rotate-3 group-hover:rotate-0 transition-transform duration-500" />
               <img
-                src="/src/assets/hero.png"
+                src={aboutMe}
                 alt="Profile"
                 className="relative rounded-3xl shadow-2xl w-full aspect-square object-cover border border-white/5"
               />
