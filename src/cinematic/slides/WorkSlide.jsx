@@ -5,6 +5,7 @@ import { startWorkCanvas } from '../canvases/workCanvas';
 import serviceis from '../../assets/serviceis.png';
 import consulateRecruitment from '../../assets/consulaterecruitment.png';
 import CinFooter from '../CinFooter';
+import ScrollableContent from '../ScrollableContent';
 
 const PROJECTS = [
   {
@@ -50,8 +51,9 @@ export default function WorkSlide() {
         </motion.div>
         <div className="cin-gold-bar" style={{ margin: '8px 0 24px' }} />
 
-        <div className="cin-proj-grid">
-          {PROJECTS.map((p, i) => (
+        <ScrollableContent>
+          <div className="cin-proj-grid">
+            {PROJECTS.map((p, i) => (
             <motion.div
               key={i}
               className="cin-proj-card"
@@ -80,6 +82,7 @@ export default function WorkSlide() {
             </motion.div>
           ))}
         </div>
+        </ScrollableContent>
       </div>
 
       <CinFooter />

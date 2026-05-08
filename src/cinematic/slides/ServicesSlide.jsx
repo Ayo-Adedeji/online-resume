@@ -4,6 +4,7 @@ import { useCanvas } from '../useCanvas';
 import { startWorkCanvas } from '../canvases/workCanvas';
 import { HiOutlineCode, HiOutlineServer, HiOutlineCloudUpload, HiOutlineCheckCircle } from 'react-icons/hi';
 import CinFooter from '../CinFooter';
+import ScrollableContent from '../ScrollableContent';
 
 const SERVICES = [
   {
@@ -66,8 +67,9 @@ export default function ServicesSlide() {
           <div className="cin-gold-bar" />
         </motion.div>
 
-        <div className="svc-grid">
-          {SERVICES.map((svc, si) => (
+        <ScrollableContent>
+          <div className="svc-grid">
+            {SERVICES.map((svc, si) => (
             <motion.div
               key={si}
               className="svc-card"
@@ -106,6 +108,7 @@ export default function ServicesSlide() {
             </motion.div>
           ))}
         </div>
+        </ScrollableContent>
       </div>
 
       <CinFooter />

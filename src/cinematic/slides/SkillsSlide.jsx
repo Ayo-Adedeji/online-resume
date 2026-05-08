@@ -6,6 +6,7 @@ import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt, FaGithub } from 
 import { SiTypescript, SiExpress, SiMongodb, SiTailwindcss, SiSupabase } from 'react-icons/si';
 import { TbBrandReactNative } from 'react-icons/tb';
 import CinFooter from '../CinFooter';
+import ScrollableContent from '../ScrollableContent';
 
 const FRONTEND = [
   { name: 'HTML5',        icon: <FaHtml5 />,           color: '#E34F26', level: 95 },

@@ -3,22 +3,28 @@ import { motion } from 'framer-motion';
 import { useCanvas } from '../useCanvas';
 import { startTestiCanvas } from '../canvases/testiCanvas';
 import CinFooter from '../CinFooter';
+import ScrollableContent from '../ScrollableContent';
+
+import chefZoeyPhoto from '../../assets/1417owner.jpeg';
 
 const TESTIMONIALS = [
   {
     quote: "This really projects a solution — not just a website. This is actually a solution for what I want to do. Not just for me as the owner, but even for the clients. This makes it easy and seamless.",
     name: 'Client',
     role: 'Project Manager, ServiceIS',
+    photo: null,
   },
   {
-    quote: "Wow. This is really nice. I love it. I love the feel, I love how it looks, I love how it makes me feel.",
+    quote: "This is such a beautiful and well put together design. Honestly the speed at which it got done was mind blowing. Will definitely recommend your services.",
     name: 'Chef Zoey',
     role: 'Owner, 1417bychefzoey.com',
+    photo: chefZoeyPhoto,
   },
   {
     quote: "I love this work. Very simple, no margins, and concise.",
     name: 'Client',
     role: 'Consulate Recruitment Agency, Project Manager',
+    photo: null,
   },
 ];
 
@@ -56,8 +62,9 @@ export default function TestimonialsSlide() {
           <div className="cin-gold-bar" />
         </motion.div>
 
-        <div className="cin-testi-grid">
-          {TESTIMONIALS.map((t, i) => (
+        <ScrollableContent>
+          <div className="cin-testi-grid">
+            {TESTIMONIALS.map((t, i) => (
             <motion.div
               key={i}
               className="cin-testi-card"
@@ -69,12 +76,20 @@ export default function TestimonialsSlide() {
               <SpeakBars />
               <div className="cin-testi-stars">★★★★★</div>
               <p className="cin-testi-quote">"{t.quote}"</p>
-              <div className="cin-testi-name">{t.name}</div>
-              <div className="cin-testi-role">{t.role}</div>
+              <div className="cin-testi-author">
+                {t.photo && (
+                  <img src={t.photo} alt={t.name} className="cin-testi-photo" />
+                )}
+                <div>
+                  <div className="cin-testi-name">{t.name}</div>
+                  <div className="cin-testi-role">{t.role}</div>
+                </div>
+              </div>
               <div className="cin-testi-bg-quote">"</div>
             </motion.div>
           ))}
         </div>
+        </ScrollableContent>
       </div>
 
       <CinFooter />

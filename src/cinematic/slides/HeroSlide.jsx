@@ -90,7 +90,7 @@ export default function HeroSlide({ goTo }) {
           <a href="/download.pdf" download className="cin-btn-primary">
             ↓ Download CV
           </a>
-          <button className="cin-btn-outline" onClick={() => goTo(6)}>
+          <button className="cin-btn-outline" onClick={() => goTo(7)}>
             ✉ Let's Talk
           </button>
         </motion.div>

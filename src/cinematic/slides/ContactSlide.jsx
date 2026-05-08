@@ -4,6 +4,7 @@ import { useCanvas } from '../useCanvas';
 import { startContactCanvas } from '../canvases/contactCanvas';
 import { FaLinkedinIn, FaEnvelope, FaPhone, FaWhatsapp } from 'react-icons/fa';
 import CinFooter from '../CinFooter';
+import ScrollableContent from '../ScrollableContent';
 
 export default function ContactSlide() {
   const canvasRef = useRef(null);

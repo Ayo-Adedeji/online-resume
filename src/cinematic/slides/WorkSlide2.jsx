@@ -6,6 +6,7 @@ import chefZoey from '../../assets/1417.png';
 import consulateBooks from '../../assets/consulatebooks.png';
 import ictware from '../../assets/ictware.png';
 import CinFooter from '../CinFooter';
+import ScrollableContent from '../ScrollableContent';
 
 const PROJECTS = [
   {
@@ -60,8 +61,9 @@ export default function WorkSlide2() {
         </motion.div>
         <div className="cin-gold-bar" style={{ margin: '8px 0 20px' }} />
 
-        <div className="cin-proj-grid">
-          {PROJECTS.map((p, i) => (
+        <ScrollableContent>
+          <div className="cin-proj-grid">
+            {PROJECTS.map((p, i) => (
             <motion.div
               key={i}
               className="cin-proj-card"
@@ -114,6 +116,7 @@ export default function WorkSlide2() {
             ↗ Live
           </a>
         </motion.div>
+        </ScrollableContent>
       </div>
 
       <CinFooter />

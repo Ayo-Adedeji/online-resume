@@ -71,7 +71,7 @@ export default function AboutSlide({ goTo }) {
               ))}
             </div>
 
-            <button className="cin-btn-primary" onClick={() => goTo(6)}>
+            <button className="cin-btn-primary" onClick={() => goTo(7)}>
               ✉ Let's Talk
             </button>
           </motion.div>
