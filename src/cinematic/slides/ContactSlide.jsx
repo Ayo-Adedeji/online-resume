@@ -17,7 +17,7 @@ export default function ContactSlide() {
       <div className="cin-vignette" />
 
       <div className="cin-slide-content">
-        <div className="cin-contact-wrap">
+        <div className="cin-contact-wrap cin-scroll-inner">
           {/* Left */}
           <motion.div
             className="cin-contact-left"

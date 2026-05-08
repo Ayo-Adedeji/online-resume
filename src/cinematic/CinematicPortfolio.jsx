@@ -55,7 +55,8 @@ export default function CinematicPortfolio() {
     return () => window.removeEventListener('keydown', onKey);
   }, [goTo]);
 
-  // Touch swipe — React synthetic events on root div
+  // Touch swipe — only fires on clearly horizontal swipes
+  // Vertical touches are left alone so scroll containers work
   const handleTouchStart = useCallback((e) => {
     touchStartX.current = e.touches[0].clientX;
     touchStartY.current = e.touches[0].clientY;
@@ -64,7 +65,11 @@ export default function CinematicPortfolio() {
   const handleTouchEnd = useCallback((e) => {
     const dx = touchStartX.current - e.changedTouches[0].clientX;
     const dy = touchStartY.current - e.changedTouches[0].clientY;
-    if (Math.abs(dx) >= 35 && Math.abs(dx) > Math.abs(dy)) {
+    const absDx = Math.abs(dx);
+    const absDy = Math.abs(dy);
+    // Only trigger slide change if clearly horizontal (3:1 ratio) and 50px+
+    // This lets vertical scrolls pass through untouched
+    if (absDx >= 50 && absDx > absDy * 3) {
       goTo(currentRef.current + (dx > 0 ? 1 : -1));
     }
   }, [goTo]);
