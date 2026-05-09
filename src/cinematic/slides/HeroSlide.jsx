@@ -87,7 +87,7 @@ export default function HeroSlide({ goTo }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.5 }}
         >
-          <a href="/download.pdf" download className="cin-btn-primary">
+          <a href="/cv.pdf" download className="cin-btn-primary">
             ↓ Download CV
           </a>
           <button className="cin-btn-outline" onClick={() => goTo(7)}>
