@@ -17,6 +17,7 @@ const SERVICES = [
       { label: 'Lightning-Fast Performance',      desc: 'Optimized for speed & responsiveness' },
       { label: 'Inclusive Accessibility',         desc: 'Built for every user' },
       { label: 'Collaborative Excellence',        desc: 'Teamwork-driven delivery' },
+      { label: 'Figma to Code',                   desc: 'Translating Figma designs into pixel-perfect, responsive production layouts' },
     ],
   },
   {

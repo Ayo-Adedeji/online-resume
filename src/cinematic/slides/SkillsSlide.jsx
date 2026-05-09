@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { useCanvas } from '../useCanvas';
 import { startSkillsCanvas } from '../canvases/skillsCanvas';
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt, FaGithub } from 'react-icons/fa';
-import { SiTypescript, SiExpress, SiMongodb, SiTailwindcss, SiSupabase } from 'react-icons/si';
+import { SiTypescript, SiExpress, SiMongodb, SiTailwindcss, SiSupabase, SiFigma } from 'react-icons/si';
 import { TbBrandReactNative } from 'react-icons/tb';
 import CinFooter from '../CinFooter';
 import ScrollableContent from '../ScrollableContent';
@@ -17,6 +17,7 @@ const FRONTEND = [
   { name: 'Tailwind CSS', icon: <SiTailwindcss />,      color: '#06B6D4', level: 90 },
   { name: 'React Native', icon: <TbBrandReactNative />, color: '#61DAFB', level: 75 },
   { name: 'Git / GitHub', icon: <FaGithub />,           color: '#ffffff', level: 85 },
+  { name: 'Figma',        icon: <SiFigma />,             color: '#F24E1E', level: 82 },
 ];
 
 const BACKEND = [
